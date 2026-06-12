@@ -1,2 +1,2 @@
 # finalnot_mat2_26
-Final Matematik 2 Notları Sorgulamak için
+Yapay Zeka ve Ekonomi Dersi Final Notları Sorgulamak için
