@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Not Sorgulama</title>
+  <title>Final Not Sorgulama</title>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   
@@ -62,7 +62,7 @@
 
 <div class="container">
 
-  <h2>Öğrenci Not Sorgulama</h2>
+  <h2>Öğrenci Final Not Sorgulama</h2>
 
   <input type="text" id="ogrNo" placeholder="Öğrenci No">
   
@@ -96,7 +96,7 @@
 	A kitapçığı açıklaması:
 	S 1, 2, 3: Grafikli Soru
 	Soru 4, 5, 6: f(x)=...e^x // 1. ve 2. türev
-  S 7: Ln ... ^3 fonksiyon türevi
+  	S 7: Ln ... ^3 fonksiyon türevi
 	S 8: Polinom fonksiyon grafik teğeti
 	S 9, 10: 3x3 Matris determinantı ve kofaktör
 	Soru 11: e^f(x) fonksiyon integrali
@@ -112,16 +112,16 @@
 	B kitapçığı açıklaması:
 	S 1: Belirli integral çözümü
 	S 2, 3: Kesirli İntegral çözümü `
-  Soru 4, 5, 6: f(x)=...e^x // 1. ve 2. türev
-  S 7, 8: Doğrusal Denklem sistemi, ters matris çözümü
-  S 9, 10: 3x3 Matris determinantı ve kofaktör
-  Soru 11: e^f(x) fonksiyon integrali
-  Soru 12, 13, 14, 15: AC, MC, Kar fonksiyonu
-  S 16: Ln ... ^3 fonksiyon türevi
+  	Soru 4, 5, 6: f(x)=...e^x // 1. ve 2. türev
+  	S 7, 8: Doğrusal Denklem sistemi, ters matris çözümü
+  	S 9, 10: 3x3 Matris determinantı ve kofaktör
+  	Soru 11: e^f(x) fonksiyon integrali
+  	Soru 12, 13, 14, 15: AC, MC, Kar fonksiyonu
+  	S 16: Ln ... ^3 fonksiyon türevi
 	S 17: Polinom fonksiyon grafik teğeti
 	S 18: Birim matris bilgi sorusu
-  S 19, 20: AC ve MC dönüşüm türev
-  S 21, 22, 23: Grafikli Soru
+  	S 19, 20: AC ve MC dönüşüm türev
+  	S 21, 22, 23: Grafikli Soru
 	};  
   
   async function sorgula(){
@@ -132,7 +132,7 @@
       .trim();
 
     const adSoyad = document
-      .getElementById("ad_oyad")
+      .getElementById("ad_soyad")
       .value
       .trim();
 
@@ -141,7 +141,7 @@
     sonucDiv.innerHTML = "Sorgulanıyor...";
 
     const { data, error } = await supabaseClient
-      .from('final_mat2not')
+      .from('Final_haziran26_mat2')
       .select('*')
       .eq('no_duzgun', ogrNo)
       .ilike('ad_soyad', adSoyad)
