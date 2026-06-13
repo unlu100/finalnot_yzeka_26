@@ -156,7 +156,7 @@ S 21, 22, 23: Grafikli Soru
 
       // Build query and only add ilike filter if adSoyad provided
       let query = supabaseClient
-        .from('final_haziran26_mat2')
+        .from('final_haziran26_yzeka')
         .select('*')
         .eq('no_duzgun', ogrNo)
         .limit(1);
@@ -185,7 +185,7 @@ S 21, 22, 23: Grafikli Soru
       try{
         const yeniSayac = (ogr.sayac || 0) + 1;
         await supabaseClient
-          .from('final_haziran26_mat2')
+          .from('final_haziran26_yzeka')
           .update({ sayac: yeniSayac })
           .eq('ogr_no1', ogr.no_duzgun);
 
@@ -208,17 +208,15 @@ S 21, 22, 23: Grafikli Soru
 
           <p><strong>Ad Soyad Notu:</strong> ${ogr.hata_bildirim || ''}</p>
 
-          <p><strong>Puan:</strong> ${ogr.hesap2son_x5_ek4 || ''}</p>
+          <p><strong>Puan:</strong> ${ogr.hesap2_x3 || ''}</p>
 
           <p><strong>Doğru Sayısı:</strong> ${ogr.dogru_sayi || ''}</p>
 
-          <p><strong>Yanlış Sayısı:</strong> ${ogr.yanlis_sayi || ''}</p>
-
           <p><strong>Verdiğiniz Cevaplar:</strong> ${ogr.Konu1Cevap || ''}</p>
 
-          <p><strong>Doğrular1:</strong> ${ogr.dogru_noformul || ''}</p>
+          <p><strong>Doğrular1:</strong> ${ogr.dogrular_liste2 || ''}</p>
 
-          <p><strong>Yanlışlar:</strong> ${ogr.yanlis_noformul || ''}</p>
+          <p><strong>Yanlışlar:</strong> ${ogr.yanlislar_liste2 || ''}</p>
 
           <p><strong>Toplam Görüntülenme:</strong> ${ogr._yeniSayac || ogr.sayac || ''}</p>
 
