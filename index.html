@@ -127,8 +127,8 @@ S 21, 22, 23: Grafikli Soru
 
     const sonucDiv = document.getElementById("sonuc");
 
-    if(!ogrNo){
-      sonucDiv.innerHTML = `<div class="error">Lütfen öğrenci numarası girin.</div>`;
+    if(!ogrNo  || !adSoyad){
+      sonucDiv.innerHTML = `<div class="error">Lütfen öğrenci numarası ve AD+SOYAD birlikte giriniz.</div>`;
       return;
     }
 
