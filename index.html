@@ -211,7 +211,7 @@ S 27: YSA — insan beyninin bilgi işleme biçimini simüle eder
         await supabaseClient
           .from('final_haziran26_yzeka')
           .update({ sayac: yeniSayac })
-          .eq('ogr_no1', ogr.no_duzgun);
+          .eq('no_duzgun', ogr.no_duzgun);
 
         // show yeniSayac even if update fails silently
         ogr._yeniSayac = yeniSayac;
